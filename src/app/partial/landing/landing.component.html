@@ -1,0 +1,47 @@
+<body class="h-screen flex flex-col">
+  <app-header scroll="{{this.scrollPosition}}"></app-header>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Francois+One&family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+  <main class="flex-grow">
+    <!-- Contenedor de la landing -->
+    <div class="container mx-auto mt-10">
+      <div class="flex items-center slash ">
+        <img src="https://i.pinimg.com/564x/03/82/78/038278746fdf994453b4090e6348b876.jpg" alt="Imagen" class="ft none">
+        <div class="ml-10">
+          <h1 class="text-4xl font-bold title">'POWER LEGENDS '</h1>
+          <p class="mt-4 text-lg descrip">UNA VEZ RANGER , SIEMPRE RANGER</p>
+        </div>
+      </div>
+      <!-- Sección de carrusel -->
+      <div class="w-10/12 pr-8">
+        <div class="mt-4 text">
+          <p>¡Bienvenido a Power Legends, tu destino definitivo para todo lo relacionado con la
+            icónica franquicia de Power Rangers!
+            Sumérgete en un universo lleno de acción, aventura y emociÓn. Desde la primera generación
+            de Rangers hasta las nuevas y emocionantes generaciones, 'Power Legends' estu guía definitiva
+            en el emocionante mundo de Power Rangers. ¡Únete a nosotros mientras celebramos el legado,
+            la pasión y el espíritu de los Power Rangers entodas sus formas!
+          </p>
+        </div>
+      </div>
+      <!-- Carrusel -->
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slickModalConfig">
+        <div *ngFor="let image of images">
+          <img src="{{ image.src }}" alt="{{ image.alt }}">
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </main>
+</body>
